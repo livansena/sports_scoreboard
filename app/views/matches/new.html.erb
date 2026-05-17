@@ -1,0 +1,33 @@
+<div class="min-h-screen bg-slate-950 text-white p-8">
+  <div class="max-w-2xl mx-auto bg-slate-900 p-8 rounded-xl border border-slate-800">
+    <h1 class="text-3xl font-bold mb-6">New Match</h1>
+
+    <%= form_with model: @match do |form| %>
+
+      <div class="mb-4">
+        <%= form.label :home_team_id, "Home Team" %>
+        <%= form.collection_select :home_team_id, @teams, :id, :name, {}, class: "w-full mt-2 p-3 bg-slate-800 rounded-lg" %>
+      </div>
+
+      <div class="mb-4">
+        <%= form.label :away_team_id, "Away Team" %>
+        <%= form.collection_select :away_team_id, @teams, :id, :name, {}, class: "w-full mt-2 p-3 bg-slate-800 rounded-lg" %>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <div>
+          <%= form.label :home_score, "Home Score" %>
+          <%= form.number_field :home_score, class: "w-full mt-2 p-3 bg-slate-800 rounded-lg" %>
+        </div>
+
+        <div>
+          <%= form.label :away_score, "Away Score" %>
+          <%= form.number_field :away_score, class: "w-full mt-2 p-3 bg-slate-800 rounded-lg" %>
+        </div>
+      </div>
+
+      <%= form.submit "Create Match", class: "bg-green-400 text-slate-950 px-5 py-3 rounded-lg font-bold hover:bg-green-300 cursor-pointer" %>
+
+    <% end %>
+  </div>
+</div>

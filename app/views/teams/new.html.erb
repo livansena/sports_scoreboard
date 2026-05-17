@@ -1,0 +1,23 @@
+<div class="min-h-screen bg-slate-950 text-white p-8">
+  <div class="max-w-2xl mx-auto bg-slate-900 p-8 rounded-xl border border-slate-800">
+    <h1 class="text-3xl font-bold mb-6">New Team</h1>
+
+    <%= form_with model: @team do |form| %>
+      <div class="mb-4">
+        <%= form.label :name, "Team name" %>
+        <%= form.text_field :name, class: "w-full mt-2 p-3 bg-slate-800 rounded-lg" %>
+      </div>
+
+      <div class="mb-6">
+        <%= form.label :logo, "Logo URL" %>
+        <%= form.text_field :logo, class: "w-full mt-2 p-3 bg-slate-800 rounded-lg" %>
+      </div>
+
+      <%= form.submit "Create Team", class: "bg-green-400 text-slate-950 px-5 py-3 rounded-lg font-bold cursor-pointer" %>
+    <% end %>
+
+    <div class="mt-6">
+      <%= link_to "Back to teams", teams_path, class: "text-green-400" %>
+    </div>
+  </div>
+</div>
