@@ -1,24 +1,47 @@
-# README
+# Sports Scoreboard
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Modern sports dashboard built with Ruby on Rails.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- Team management
+- Match management
+- Live-style scoreboard UI
+- Dark dashboard interface
+- PostgreSQL database
+- Responsive layout
 
-* System dependencies
+## Tech Stack
 
-* Configuration
+- Ruby on Rails
+- PostgreSQL
+- Tailwind CSS
+- JavaScript
 
-* Database creation
+## Screenshots
 
-* Database initialization
+Coming soon.
 
-* How to run the test suite
+## Future Features
 
-* Services (job queues, cache servers, search engines, etc.)
+- Automatic standings table
+- Team statistics
+- Real-time match updates
+- API integration
+- Brasileirão live data
 
-* Deployment instructions
+## Setup
 
-* ...
+```bash
+bundle install
+bin/rails db:create
+bin/rails db:migrate
+bin/rails server
+```
+
+## Author
+
+Livan Sena
+
+GitHub:
+https://github.com/livansena
